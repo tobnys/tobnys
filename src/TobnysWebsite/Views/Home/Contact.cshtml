@@ -1,17 +1,31 @@
 ﻿@{
     ViewData["Title"] = "Contact";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="container-fluid">
+    <div class="row">
+        <h2>Contact</h2>
+        <p style="text-align: center;">Questions? Feel free to contact me personally using the format below.</p>
+        <div class="col-sm-6 col-sm-offset-3">
+            <div class="con-form" id="contactForm">
+                    <div class="well">
+                        <form method="post">
+                            <div class="form-group">
+                                <label>Name:</label> <input class="form-control" id="name" placeholder="Your name" type="text"> <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>E-mail:</label> <input class="form-control" id="email" placeholder="Your e-mail adress" type="email"> <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone:</label> <input class="form-control" id="tele" placeholder="Your phone number" type="number"> <span class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label>Message:</label>
+                                <textarea class="form-control" id="message" placeholder="Your message" rows="4"></textarea> <span class="text-danger"></span>
+                            </div><button class="btn btn-default center-block" id="msgBtn" type="submit">Send</button>
+                        </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>

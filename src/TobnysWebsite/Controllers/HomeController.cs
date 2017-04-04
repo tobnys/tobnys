@@ -8,11 +8,13 @@ namespace TobnysWebsite.Controllers
 {
     public class HomeController : Controller
     {
+        [Route("")]
         public IActionResult Index()
         {
             return View();
         }
 
+        [Route("about")]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
@@ -20,15 +22,19 @@ namespace TobnysWebsite.Controllers
             return View();
         }
 
-        public IActionResult Contact()
+        [Route("portfolio")]
+        public IActionResult Portfolio()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Message"] = "Your portf page.";
 
             return View();
         }
 
-        public IActionResult Error()
+        [Route("contact")]
+        public IActionResult Contact()
         {
+            ViewData["Message"] = "Your contact page.";
+
             return View();
         }
     }
