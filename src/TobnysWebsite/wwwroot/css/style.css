@@ -41,6 +41,12 @@ h2
     font-size: 16px;
     text-align: center;
     color: black;
+    transition: font-size 0.1s;
+}
+
+.navbar-nav a:hover
+{
+    font-size: 20px;
 }
 
 .navbar .navbar-nav 
@@ -76,12 +82,18 @@ h2
     padding-top: 10px;
 }
 
-#socialMediaIcons 
+#socialMediaIcons
 {
 	color: black;
 	font-size: 32px;
 	margin: 5px;
 	text-align: center;
+    transition: font-size 0.1s;
+}
+
+#socialMediaIcons:hover
+{
+	font-size: 45px;
 }
 
 hr 
@@ -144,15 +156,84 @@ hr
 	color: white;
 }
 
+#msgBtn
+{
+    font-weight: bold;
+    font-size: 15px;
+}
+
 .projImg1
 {
-    width: 600px;
-    height: 200px;
+    position: relative;
+    width: 282px;
+    height: 202px;
     margin: 0 auto;
     border: 1px solid black;
 }
 
-a:hover
+#fixedImg
 {
-    color: black;
+    position: relative;
+    width: 280px;
+    height: 200px;
+    margin: 0 auto;
+    transition: filter 0.4s;
+}
+
+#fixedImg:hover
+{
+    filter: blur(2px);
+}
+
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  cursor: pointer;
+  display: table;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  width: 280px;
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+span.text-content span 
+{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    color: white;
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+span.text-content:hover
+{
+    opacity: 1;
+    filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.9));
+}
+
+#footerLinks
+{
+    cursor: pointer;
+    transition: font-size 0.1s;
+    text-decoration: none;
+}
+
+#footerLinks:hover
+{
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.container-fluid
+{
+    opacity: 1;
+    animation: container-fluid 0.5s ease;
+}
+
+@keyframes container-fluid {
+    from { opacity: 0; filter: blur(3px); }
+    to { opacity: 1; filter: blur(0px); }
 }
