@@ -18,7 +18,6 @@ h1
     font-weight: bold;
     text-align: center;
     font-size: 50px;
-    padding-top: 80px;
     padding-bottom: 50px;
 }
 
@@ -26,39 +25,115 @@ h2
 {
     font-weight: bold;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
     padding-bottom: 10px;
 }
 
-.navbar
+h3
 {
-    align-content: center;
+    font-weight: bold;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 5px;
 }
-.navbar-nav a
+
+.navbar-brand 
+{
+    /* background: url(../images/azure.png) center / contain no-repeat; */ 
+    width: 200px;
+    transform: translateX(-50%);
+    left: 51%;
+    position: absolute;
+    font-size: 18px;
+}
+
+.navbar-default a
 {
     align-content: center;
     font-weight: bold;
     font-size: 16px;
     text-align: center;
-    color: black;
-    transition: font-size 0.1s;
+    color: #29c492;
+    transition: font-size 0.1s, color 0.2s;
 }
 
-.navbar-nav a:hover
+.navbar-default a:hover
 {
     font-size: 20px;
 }
 
-.navbar .navbar-nav 
-{
-	display: inline-block;
-	float: none;
-    color: black;
+.navbar-default {
+    background-color: #373a3d;
+    border-color: #000000;
 }
-.navbar .navbar-collapse 
+.navbar-default .navbar-brand 
 {
-	text-align: center;
+    color: #53d1cb;
+    font-size: 20px;
 }
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-text {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #53d1cb;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #ffffff;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #ffffff;
+  background-color: #000000;
+}
+.navbar-default .navbar-toggle {
+  border-color: #000000;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #000000;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ffffff;
+}
+.navbar-default .navbar-link {
+  color: #ffffff;
+}
+.navbar-default .navbar-link:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #ffffff;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #ffffff;
+    background-color: #000000;
+  }
+}
+
 
 .footer
 {
@@ -82,18 +157,26 @@ h2
     padding-top: 10px;
 }
 
+.box1 p
+{
+    font-size: 18px;
+    font-weight: bold;
+}
+
 #socialMediaIcons
 {
 	color: black;
-	font-size: 32px;
+	font-size: 30px;
 	margin: 5px;
 	text-align: center;
-    transition: font-size 0.1s;
+    transition: text-shadow 0.3s, color 0.3s;
+    font-style: normal;
 }
 
 #socialMediaIcons:hover
 {
-	font-size: 45px;
+    text-shadow: 0 0 8px rgba(0,0,0,0.5);
+    color: #53d1cb;
 }
 
 hr 
@@ -142,8 +225,8 @@ hr
 
 .con-form
 {
-    padding-left: 25%;
-    padding-right: 25%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .well
@@ -214,17 +297,41 @@ span.text-content:hover
     filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.9));
 }
 
-#footerLinks
+.inner-container
+{
+    text-align: center;
+}
+
+.inner-container a
+{
+    text-decoration: none;
+}
+
+.inner-container p
+{
+    cursor: pointer;
+    transition: text-shadow 0.3s, color 0.3s;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.inner-container p:hover
+{
+    color: #53d1cb;
+    cursor: pointer;
+    text-decoration: none;
+    text-shadow: 0 0 2px rgba(0,0,0,0.5);
+}
+
+.inner-container i
 {
     cursor: pointer;
     transition: font-size 0.1s;
     text-decoration: none;
-}
-
-#footerLinks:hover
-{
-    cursor: pointer;
-    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    font-style: normal;
 }
 
 .container-fluid
@@ -233,7 +340,30 @@ span.text-content:hover
     animation: container-fluid 0.5s ease;
 }
 
-@keyframes container-fluid {
-    from { opacity: 0; filter: blur(3px); }
-    to { opacity: 1; filter: blur(0px); }
+@keyframes container-fluid 
+{
+    from { opacity: 0; filter: blur(3px); padding-top: 100px;}
+    to { opacity: 1; filter: blur(0px); padding-top: 0;}
 }
+
+.label
+{
+    position: absolute;
+    right: 198px;
+    top: 0px;
+    background: #53d1cb;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+
+.container-custom
+{
+    background-color: #373a3d;
+}
+
+#imgfix
+{
+    padding-bottom: 60px;
+}
+

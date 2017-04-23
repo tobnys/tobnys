@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - TobnysWebsite</title>
+    <title>@ViewData["Title"] - Tobnys</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -15,14 +15,13 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-        <link rel="stylesheet" href="~/css/style.min.css" asp-append-version="true" />
+        <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
         <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     </environment>
 </head>
 <body>
-    <h1>Tobnys</h1>
-    <div class="navbar navbar">
+    <div class="navbar navbar-default navbar-static-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -31,13 +30,14 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <a class="navbar-brand" rel="home" href="/">Tobias Nyström</a>
             </div>
+
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">Portfolio</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">about</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Portfolio">portfolio</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">contact</a></li>
                 </ul>
             </div>
         </div>
@@ -47,17 +47,10 @@
     </div>
     <hr />
     <div class="footer">
-        <footer>
+        <footer id="footer">
             <row>
-                <div class="col-sm-4">
-                    <a href="tel:+46706773004" id="footerLinks"><p>+46 (0) 70 677 3004</p></a>
-                    <a href="mailto:tobnystrom@gmail.com" id="footerLinks"><p>tobnystrom@gmail.com</p></a>
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-12">
                     <p>&copy; 2017 - Tobias Nyström</p>
-                </div>
-                <div class="col-sm-4">
-                    <a href="https://www.github.com/tobnys" target="_blank"><i class="fa fa-github" id="socialMediaIcons"></i></a> <a href="https://www.linkedin.com/in/tobias-nystr%C3%B6m-54b429124/" target="_blank"><i class="fa fa-linkedin" id="socialMediaIcons"></i></a> <br>
                 </div>
             </row>
         </footer>
